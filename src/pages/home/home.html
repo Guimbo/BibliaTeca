@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<ion-header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <ion-navbar>
+        <ion-title>Login Screen</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="background" scroll="false">
+
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center>
+                <ion-list>
+                    <ion-item>
+                        <ion-input type="text" placeholder="Nome de usuário" maxlength="12" clearInput [value]="userName" [(ngModel)]="userName"></ion-input>
+                    </ion-item>
+
+
+                    <ion-item>
+                        <ion-input #input type="password" minlength="4" clearInput [value]="passWord" [(ngModel)]="passWord" placeholder="Senha"></ion-input>
+                    </ion-item>
+
+                    <button ion-button full class="butEntrar" #login (click)="presentAlert()" color="dark">Entrar</button>
+                    <button ion-button full class="butCadastro" color="dark">Me cadastrar</button>
+                    <button ion-button full class="butSenhaNova" color="dark" small> Recuperar senha</button>
+
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+</html>
